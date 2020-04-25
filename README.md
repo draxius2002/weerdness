@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+by awadah
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
