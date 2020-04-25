@@ -26,7 +26,7 @@ class _ProductDetailsState extends State<ProductDetails> {
         ),
         centerTitle: true,
         title: Text(
-          "Item Details",
+          "Event Details",
         ),
         elevation: 0.0,
         actions: <Widget>[
@@ -105,17 +105,17 @@ class _ProductDetailsState extends State<ProductDetails> {
               padding: EdgeInsets.only(bottom: 5.0, top: 2.0),
               child: Row(
                 children: <Widget>[
-                  SmoothStarRating(
+             /*     SmoothStarRating(
                     starCount: 5,
                     color: Constants.ratingBG,
                     allowHalfRating: true,
                     rating: 5.0,
                     size: 10.0,
-                  ),
+                  ),*/
                   SizedBox(width: 10.0),
 
                   Text(
-                    "5.0 (23 Reviews)",
+                    "20 Volunteers Join",
                     style: TextStyle(
                       fontSize: 11.0,
                     ),
@@ -123,15 +123,14 @@ class _ProductDetailsState extends State<ProductDetails> {
 
                 ],
               ),
-            ),
+            ), 
 
-
-            Padding(
+          /*     Padding(
               padding: EdgeInsets.only(bottom: 5.0, top: 2.0),
               child: Row(
                 children: <Widget>[
                   Text(
-                    "20 Pieces",
+                    "20 Volunteers Join",
                     style: TextStyle(
                       fontSize: 11.0,
                       fontWeight: FontWeight.w300,
@@ -139,7 +138,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                   ),
                   SizedBox(width: 10.0),
 
-                  Text(
+               Text(
                     r"$90",
                     style: TextStyle(
                       fontSize: 14.0,
@@ -150,13 +149,13 @@ class _ProductDetailsState extends State<ProductDetails> {
 
                 ],
               ),
-            ),
+            ),*/
 
 
             SizedBox(height: 20.0),
 
             Text(
-              "Product Description",
+              "Event Description",
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
@@ -249,21 +248,92 @@ class _ProductDetailsState extends State<ProductDetails> {
         ),
       ),
 
-
-
-      bottomNavigationBar: Container(
-        height: 50.0,
-        child: RaisedButton(
-          child: Text(
-            "ADD TO CART",
+/*
+        Center(
+            child: Container(
+              width: MediaQuery.of(context).size.width/2,
+              child: Row(
+                children: <Widget>[
+                  RawMaterialButton(
+                    onPressed: (){},
+                    fillColor: Colors.blue[800],
+                    shape: CircleBorder(),
+                    elevation: 4.0,
+                    child: Padding(
+                      padding: EdgeInsets.all(15),
+                     child: Text(
+            "JOIN",
             style: TextStyle(
               color: Colors.white,
             ),
           ),
-          color: Theme.of(context).accentColor,
-          onPressed: (){},
-        ),
-      ),
+                    ),
+                  ),
+
+                  RawMaterialButton(
+                    onPressed: (){},
+                    fillColor: Colors.white,
+                    shape: CircleBorder(),
+                    elevation: 4.0,
+                    child: Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Text(
+            "JOIN",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),*/
+
+         // SizedBox(height: 20.0),
+      bottomNavigationBar: Container(
+      //  width: MediaQuery.of(context).size.width/100,
+              child: Row(
+                children: <Widget>[
+                  RawMaterialButton(
+                    onPressed: (){},
+                    fillColor: Theme.of(context).accentColor,
+                    //shape: CircleBorder(),
+                   
+                    elevation: 4.0,
+                    child: Padding(
+                      padding: EdgeInsets.all(15),
+                     child: Text(
+            "JOIN",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+                    ),
+                  ),
+
+                  RawMaterialButton(
+                    onPressed: (){},
+                    fillColor: Colors.white,
+                 //   shape: CircleBorder(),
+                    elevation: 4.0,
+                    child: Padding(
+                      padding: EdgeInsets.all(15),
+                      child: Text(
+            "NOT JOIN",
+            style: TextStyle(
+              color: Theme.of(context).accentColor,
+            ),
+          ),
+                    ),
+                  ),
+                ],
+              ),
+          
+      ),  
+
+
+
     );
   }
 }
