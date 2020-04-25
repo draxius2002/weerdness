@@ -7,53 +7,57 @@ class FavoriteScreen extends StatefulWidget {
   _FavoriteScreenState createState() => _FavoriteScreenState();
 }
 
-class _FavoriteScreenState extends State<FavoriteScreen> with AutomaticKeepAliveClientMixin<FavoriteScreen>{
+class _FavoriteScreenState extends State<FavoriteScreen>
+    with AutomaticKeepAliveClientMixin<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     super.build(context);
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
-        child: ListView(
-          children: <Widget>[
-            SizedBox(height: 10.0),
-            Text(
-              "My Favorite Items",
-              style: TextStyle(
-                fontSize: 23,
-                fontWeight: FontWeight.w800,
-              ),
+      body: CustomScrollView(
+        //padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
+        primary: false,
+        slivers: <Widget>[
+          SliverPadding(
+            padding: const EdgeInsets.all(20),
+            sliver: SliverGrid.count(
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              crossAxisCount: 2,
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text('He\'d have you all unravel at the'),
+                  color: Colors.green[100],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text('Heed not the rabble'),
+                  color: Colors.green[200],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text('Sound of screams but the'),
+                  color: Colors.green[300],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text('Who scream'),
+                  color: Colors.green[400],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text('Revolution is coming...'),
+                  color: Colors.green[500],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text('Revolution, they...'),
+                  color: Colors.green[600],
+                ),
+              ],
             ),
-            SizedBox(height: 10.0),
-
-            GridView.builder(
-              shrinkWrap: true,
-              primary: false,
-              physics: NeverScrollableScrollPhysics(),
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: MediaQuery.of(context).size.width /
-                    (MediaQuery.of(context).size.height / 1.25),
-              ),
-              itemCount: events == null ? 0 :events.length,
-              itemBuilder: (BuildContext context, int index) {
-//                Food food = Food.fromJson(events[index]);
-                Map food = events[index];
-//                print(events);
-//                print(events.length);
-                return GridProduct(
-                  img: food['img'],
-                  isFav: true,
-                  name: food['name'],
-                  rating: 5.0,
-                  raters: 23,
-                );
-              },
-            ),
-
-            SizedBox(height: 30),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
