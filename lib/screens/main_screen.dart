@@ -5,7 +5,7 @@ import 'package:ffg_app/screens/favorite_screen.dart';
 import 'package:ffg_app/screens/home.dart';
 import 'package:ffg_app/screens/notifications.dart';
 import 'package:ffg_app/screens/profile.dart';
-import 'package:ffg_app/screens/search.dart';
+import 'package:ffg_app/screens/Contribute_screen.dart';
 import 'package:ffg_app/util/const.dart';
 import 'package:ffg_app/widgets/badge.dart';
 

@@ -31,7 +31,7 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
         ),
         centerTitle: true,
         title: Text(
-          "Register as a Group",
+          "Volunteer Group Registration",
         ),
         elevation: 0.0,
         actions: <Widget>[
