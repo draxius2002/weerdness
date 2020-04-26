@@ -390,7 +390,15 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
                           "OK",
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         ),
-                        onPressed: () => Navigator.pop(context),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) {
+                                return MainScreen();
+                              },
+                            ),
+                          );
+                        },
                         width: 120,
                       )
                     ],
