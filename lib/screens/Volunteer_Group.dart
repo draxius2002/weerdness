@@ -6,6 +6,7 @@ import 'package:ffg_app/widgets/badge.dart';
 //import 'package:ffg_app/widgets/grid_product.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class VolunteerGroup extends StatefulWidget {
   @override
@@ -57,37 +58,35 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
-          
-              /*
+            /*
                   GFCard(
                     padding: new EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0), //inside            
                           content: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[*/
-                              GFImageOverlay( 
-                                height: 160, //200
-                                width: 280, //280
-                                boxFit: BoxFit.cover,
-                                child: Padding (
-                                     padding: EdgeInsets.symmetric(horizontal : 20.0, vertical: 35),
-                                    child: Text(
-                                  'We invite your group or organization to be part of us to serve the poor. No experience is neccasary, we care alot more about a smile and a desire to help others. :)',
-                                  style: TextStyle(color: GFColors.WHITE, height: 1.5),
-                                  textAlign: TextAlign.justify,
-                                  
-                                )
-                                ),
-                                colorFilter: ColorFilter.mode( Colors.black.withOpacity(0.60), BlendMode.darken),
-                                image: const AssetImage('assets/ffg20.jpg'),
-                                margin: new EdgeInsets.only(top: 10.0), //outside
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                               SizedBox(height: 30.0),
-                          /*  ],
+            GFImageOverlay(
+              height: 160, //200
+              width: 280, //280
+              boxFit: BoxFit.cover,
+              child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 35),
+                  child: Text(
+                    'We invite your group or organization to be part of us to serve the poor. No experience is neccasary, we care alot more about a smile and a desire to help others. :)',
+                    style: TextStyle(color: GFColors.WHITE, height: 1.5),
+                    textAlign: TextAlign.justify,
+                  )),
+              colorFilter: ColorFilter.mode(
+                  Colors.black.withOpacity(0.60), BlendMode.darken),
+              image: const AssetImage('assets/ffg20.jpg'),
+              margin: new EdgeInsets.only(top: 10.0), //outside
+              borderRadius: BorderRadius.circular(10),
+            ),
+            SizedBox(height: 30.0),
+            /*  ],
                           ),
                         ),*/
-            
-                 /*
+
+            /*
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.only(
@@ -238,7 +237,6 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
               ),
             ),
             SizedBox(height: 10.0),
-
             Card(
               elevation: 3.0,
               child: Container(
@@ -282,10 +280,8 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
                 ),
               ),
             ),
-
             SizedBox(height: 10.0),
-
-                        Card(
+            Card(
               elevation: 3.0,
               child: Container(
                 decoration: BoxDecoration(
@@ -328,10 +324,8 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
                 ),
               ),
             ),
-
-            
             SizedBox(height: 10.0),
-                        Card(
+            Card(
               elevation: 3.0,
               child: Container(
                 decoration: BoxDecoration(
@@ -359,7 +353,7 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
                       ),
                       borderRadius: BorderRadius.circular(5.0),
                     ),
-                    hintText: "Frequent Volunteer",
+                    hintText: "Date to collaborate",
                     prefixIcon: Icon(
                       Icons.perm_identity,
                       color: Colors.black,
@@ -374,7 +368,6 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
                 ),
               ),
             ),
-
             SizedBox(height: 10.0),
             Container(
               height: 50.0,
@@ -386,18 +379,26 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
                   ),
                 ),
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return MainScreen();
-                      },
-                    ),
-                  );
+                  Alert(
+                    context: context,
+                    type: AlertType.success,
+                    title: "Submission Success",
+                    desc: "We'll reach you back for further process ",
+                    buttons: [
+                      DialogButton(
+                        child: Text(
+                          "OK",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        onPressed: () => Navigator.pop(context),
+                        width: 120,
+                      )
+                    ],
+                  ).show();
                 },
                 color: Theme.of(context).accentColor,
               ),
             ),
-
             SizedBox(height: 10.0),
           ],
         ),
