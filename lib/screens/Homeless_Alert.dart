@@ -146,7 +146,7 @@ class _HomelessAlertState extends State<HomelessAlert> {
                       ),
                       borderRadius: BorderRadius.circular(5.0),
                     ),
-                    hintText: "Age",
+                    hintText: "Name",
                     prefixIcon: Icon(
                       Icons.perm_identity,
                       color: Colors.black,
@@ -234,7 +234,7 @@ class _HomelessAlertState extends State<HomelessAlert> {
                       ),
                       borderRadius: BorderRadius.circular(5.0),
                     ),
-                    hintText: "Name",
+                    hintText: "Age",
                     prefixIcon: Icon(
                       Icons.perm_identity,
                       color: Colors.black,

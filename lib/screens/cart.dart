@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ffg_app/screens/checkout.dart';
 import 'package:ffg_app/util/const.dart';
 import 'package:ffg_app/util/events.dart';
-import 'package:ffg_app/widgets/cart_item.dart';
+import 'package:ffg_app/widgets/Planner.dart';
 import 'package:ffg_app/widgets/smooth_star_rating.dart';
 
 class CartScreen extends StatefulWidget {

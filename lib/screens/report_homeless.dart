@@ -213,7 +213,7 @@ class _ReportHomelessState extends State<ReportHomeless> {
             height: 50.0,
             child: RaisedButton(
               child: Text(
-                "Register".toUpperCase(),
+                "Submit".toUpperCase(),
                 style: TextStyle(
                   color: Colors.white,
                 ),
