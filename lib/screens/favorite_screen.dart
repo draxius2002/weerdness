@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ffg_app/util/events.dart';
 import 'package:ffg_app/widgets/grid_product.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
+const StaggeredTile.count(3, 1);
 
 class FavoriteScreen extends StatefulWidget {
   @override
@@ -25,15 +28,34 @@ class _FavoriteScreenState extends State<FavoriteScreen>
               crossAxisCount: 2,
               children: <Widget>[
                 Container(
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('He\'d have you all unravel at the'),
-                  color: Colors.green[100],
-                ),
+                    //width: 200,
+                    padding: const EdgeInsets.all(8),
+                    child: new TextField(
+                      decoration: new InputDecoration(
+                          border: new OutlineInputBorder(
+                            borderRadius: const BorderRadius.all(
+                              const Radius.circular(10.0),
+                            ),
+                          ),
+                          filled: true,
+                          hintStyle: new TextStyle(color: Colors.grey[800]),
+                          hintText: "Type in your text",
+                          fillColor: Colors.white70),
+                    )),
                 Container(
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Heed not the rabble'),
-                  color: Colors.green[200],
-                ),
+                    padding: const EdgeInsets.all(8),
+                    child: new TextField(
+                      decoration: new InputDecoration(
+                          border: new OutlineInputBorder(
+                            borderRadius: const BorderRadius.all(
+                              const Radius.circular(10.0),
+                            ),
+                          ),
+                          filled: true,
+                          hintStyle: new TextStyle(color: Colors.grey[800]),
+                          hintText: "Type in your text",
+                          fillColor: Colors.white70),
+                    )),
                 Container(
                   padding: const EdgeInsets.all(8),
                   child: const Text('Sound of screams but the'),
