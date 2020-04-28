@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ffg_app/screens/notifications.dart';
+import 'package:ffg_app/screens/main_screen.dart';
 import 'package:ffg_app/util/comments.dart';
 import 'package:ffg_app/util/const.dart';
 import 'package:ffg_app/util/events.dart';
 import 'package:ffg_app/widgets/badge.dart';
 import 'package:ffg_app/widgets/smooth_star_rating.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class EventDetails extends StatefulWidget {
   @override
@@ -276,38 +278,65 @@ class _EventDetailsState extends State<EventDetails> {
       bottomNavigationBar: Container(
         //  width: MediaQuery.of(context).size.width/100,
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            SizedBox(
-              width: 180,
-              child: RawMaterialButton(
-                onPressed: () {},
-                fillColor: Theme.of(context).accentColor,
-                elevation: 4.0,
-                child: Padding(
-                  padding: EdgeInsets.all(15),
+            Expanded(
+              child: MaterialButton(
+                color: Theme.of(context).accentColor,
+                elevation: 0,
+                onPressed: ()  {
+                  Alert(
+                    context: context,
+                    type: AlertType.success,
+                    title: "Submission Success",
+                    desc: "We'll reach you back for further process ",
+                    buttons: [
+                      DialogButton(
+                        child: Text(
+                          "OK",
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) {
+                                return MainScreen();
+                              },
+                            ),
+                          );
+                        },
+                        width: 120,
+                      )
+                    ],
+                  ).show();
+                },
+                child: Container(
+                  padding: EdgeInsets.all(15.0),
                   child: Text(
                     "JOIN",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
-                    ),
+                        fontSize: 15.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400),
                   ),
                 ),
               ),
             ),
-            SizedBox(
-              width: 180,
-              child: RawMaterialButton(
+            Expanded(
+              child: MaterialButton(
+                color: Colors.black54,
+                elevation: 0,
                 onPressed: () {},
-                fillColor: Colors.white,
-                //   shape: CircleBorder(),
-                elevation: 4.0,
-                child: Padding(
-                  padding: EdgeInsets.all(15),
+                child: Container(
+                  padding: EdgeInsets.all(15.0),
                   child: Text(
                     "NOT JOIN",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: Theme.of(context).accentColor,
-                    ),
+                        fontSize: 15.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w400),
                   ),
                 ),
               ),

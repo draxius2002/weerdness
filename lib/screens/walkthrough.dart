@@ -44,12 +44,10 @@ class _WalkthroughState extends State<Walkthrough> {
       ),
 
       PageViewModel(
-       title :  "Easy Payment",
-       body : "Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus."
-            " Vestibulum ac diam sit amet quam vehicula elementum sed sit amet "
-            "dui. Nulla porttitor accumsan tincidunt.",
+       title :  "Easy to Contribute",
+       body : "Help the homeless by donating something you can affort too! ",
         image: Image.asset(
-          "assets/on3.png",
+          "assets/V4.png",
           height: 175.0,
         ),
         decoration: PageDecoration(

@@ -58,12 +58,6 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
         child: ListView(
           shrinkWrap: true,
           children: <Widget>[
-            /*
-                  GFCard(
-                    padding: new EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0), //inside            
-                          content: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[*/
             GFImageOverlay(
               height: 160, //200
               width: 280, //280
@@ -82,29 +76,6 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
               borderRadius: BorderRadius.circular(10),
             ),
             SizedBox(height: 30.0),
-            /*  ],
-                          ),
-                        ),*/
-
-            /*
-            Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.only(
-                top: 25.0,
-              ),
-              height: 200,
-              width: 300,
-              color: Colors.black12,
-              child: Text(
-                "Create an account",
-                style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.w700,
-                  color: Theme.of(context).accentColor,
-                ),
-              ),
-            ),
-            SizedBox(height: 30.0), */
             Card(
               elevation: 3.0,
               child: Container(
