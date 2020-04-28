@@ -2,7 +2,7 @@
 
 A new Flutter project.
 
-by awadah test 12345
+by awadah test
 
 ## Getting Started
 
