@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ffg_app/screens/cart.dart';
-import 'package:ffg_app/screens/favorite_screen.dart';
+import 'package:ffg_app/screens/Calendar_screen.dart';
+import 'package:ffg_app/screens/Map_screen.dart';
 import 'package:ffg_app/screens/home.dart';
 import 'package:ffg_app/screens/notifications.dart';
 import 'package:ffg_app/screens/profile.dart';
@@ -57,9 +57,9 @@ class _MainScreenState extends State<MainScreen> {
           onPageChanged: onPageChanged,
           children: <Widget>[
             Home(),
-            FavoriteScreen(),
-            SearchScreen(),
-            CartScreen(),
+            MapScreen(),
+            ContributeScreen(),
+            CalendarScreen(),
             Profile(),
           ],
         ),

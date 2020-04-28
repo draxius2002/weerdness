@@ -4,14 +4,14 @@ import 'package:ffg_app/util/Contributions.dart';
 //import 'package:ffg_app/podo/Contribute.dart';
 import 'package:ffg_app/widgets/smooth_star_rating.dart';
 
-class SearchScreen extends StatefulWidget {
+class ContributeScreen extends StatefulWidget {
   @override
-  _SearchScreenState createState() => _SearchScreenState();
+  _ContributeScreenState createState() => _ContributeScreenState();
 }
 
-class _SearchScreenState extends State<SearchScreen>
-    with AutomaticKeepAliveClientMixin<SearchScreen> {
-  final TextEditingController _searchControl = new TextEditingController();
+class _ContributeScreenState extends State<ContributeScreen>
+    with AutomaticKeepAliveClientMixin<ContributeScreen> {
+  final TextEditingController _ContributeControl = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class _SearchScreenState extends State<SearchScreen>
                   ),
                 ),
                 maxLines: 1,
-                controller: _searchControl,
+                controller: _ContributeControl,
               ),
             ),
           ),

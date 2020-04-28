@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ffg_app/screens/dishes.dart';
-import 'package:ffg_app/screens/Homeless_Alert.dart';
-import 'package:ffg_app/screens/Volunteer_Group.dart';
+import 'package:ffg_app/screens/Form_Notify_Homeless.dart';
+import 'package:ffg_app/screens/Form_Volunteer_Group.dart';
 //import 'package:ffg_app/widgets/grid_product.dart';
 //import 'package:ffg_app/widgets/home_category.dart';
 import 'package:ffg_app/widgets/slider_item.dart';
@@ -159,7 +159,7 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return HomelessAlert();
+                        return NotifyHomeless();
                       },
                     ),
                   );

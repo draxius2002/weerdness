@@ -5,13 +5,13 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 //const StaggeredTile.count(3, 1);
 
-class FavoriteScreen extends StatefulWidget {
+class MapScreen extends StatefulWidget {
   @override
-  _FavoriteScreenState createState() => _FavoriteScreenState();
+  _MapScreenState createState() => _MapScreenState();
 }
 
-class _FavoriteScreenState extends State<FavoriteScreen>
-    with AutomaticKeepAliveClientMixin<FavoriteScreen> {
+class _MapScreenState extends State<MapScreen>
+    with AutomaticKeepAliveClientMixin<MapScreen> {
   @override
   Widget build(BuildContext context) {
     super.build(context);

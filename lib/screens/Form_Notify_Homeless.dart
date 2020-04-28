@@ -6,12 +6,12 @@ import 'package:ffg_app/widgets/badge.dart';
 import 'package:ffg_app/widgets/grid_product.dart';
 import 'package:getflutter/getflutter.dart';
 
-class HomelessAlert extends StatefulWidget {
+class NotifyHomeless extends StatefulWidget {
   @override
-  _HomelessAlertState createState() => _HomelessAlertState();
+  _NotifyHomelessState createState() => _NotifyHomelessState();
 }
 
-class _HomelessAlertState extends State<HomelessAlert> {
+class _NotifyHomelessState extends State<NotifyHomeless> {
   final TextEditingController _nameControl = new TextEditingController();
   final TextEditingController _ageControl = new TextEditingController();
   final TextEditingController _genderControl = new TextEditingController();
