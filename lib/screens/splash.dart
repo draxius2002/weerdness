@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:ffg_app/screens/walkthrough.dart';
-import 'package:ffg_app/util/const.dart';
+//import 'package:ffg_app/util/const.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

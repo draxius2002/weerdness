@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ffg_app/util/events.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-
-//const StaggeredTile.count(3, 1);
+//import 'package:ffg_app/util/events.dart';
 
 class MapScreen extends StatefulWidget {
   @override

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ffg_app/screens/login.dart';
 import 'package:ffg_app/screens/register.dart';
 import 'package:flutter/services.dart';
-import 'package:ffg_app/util/const.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+//import 'package:ffg_app/util/const.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 
 
 class JoinApp extends StatefulWidget {

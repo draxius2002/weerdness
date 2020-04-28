@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:ffg_app/util/const.dart';
+//import 'package:ffg_app/util/const.dart';
 import 'package:ffg_app/util/Contributions.dart';
 //import 'package:ffg_app/podo/Contribute.dart';
-import 'package:ffg_app/widgets/smooth_star_rating.dart';
+//import 'package:ffg_app/widgets/smooth_star_rating.dart';
 
 class ContributeScreen extends StatefulWidget {
   @override
