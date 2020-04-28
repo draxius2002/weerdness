@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:ffg_app/screens/categories_screen.dart';
 
-
+//WIDGETS FOLDER
 class HomeCategory extends StatefulWidget {
   final IconData icon;
   final String title;
@@ -69,4 +69,4 @@ class _HomeCategoryState extends State<HomeCategory> {
       ),
     );
   }
-}
+} */

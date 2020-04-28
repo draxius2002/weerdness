@@ -6,12 +6,12 @@ import 'package:ffg_app/util/events.dart';
 import 'package:ffg_app/widgets/badge.dart';
 import 'package:ffg_app/widgets/smooth_star_rating.dart';
 
-class ProductDetails extends StatefulWidget {
+class EventDetails extends StatefulWidget {
   @override
-  _ProductDetailsState createState() => _ProductDetailsState();
+  _EventDetailsState createState() => _EventDetailsState();
 }
 
-class _ProductDetailsState extends State<ProductDetails> {
+class _EventDetailsState extends State<EventDetails> {
   bool isFav = false;
   @override
   Widget build(BuildContext context) {

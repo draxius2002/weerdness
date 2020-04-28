@@ -11,7 +11,7 @@ class JoinApp extends StatefulWidget {
   _JoinAppState createState() => _JoinAppState();
 }
 
-
+//NAVIGATOR LOGIN & REGISTER | TAB CONTROL
 
 class _JoinAppState extends State<JoinApp> with SingleTickerProviderStateMixin{
 

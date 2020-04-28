@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ffg_app/screens/notifications.dart';
 import 'package:ffg_app/screens/main_screen.dart';
-import 'package:ffg_app/util/events.dart';
 import 'package:ffg_app/widgets/badge.dart';
-import 'package:ffg_app/widgets/grid_product.dart';
 import 'package:getflutter/getflutter.dart';
 
 class NotifyHomeless extends StatefulWidget {

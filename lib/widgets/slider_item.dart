@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ffg_app/screens/details.dart';
+import 'package:ffg_app/screens/EventDetails_Screen.dart';
 import 'package:ffg_app/util/const.dart';
 import 'package:ffg_app/widgets/smooth_star_rating.dart';
 
@@ -109,7 +109,7 @@ class SliderItem extends StatelessWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (BuildContext context){
-              return ProductDetails();
+              return EventDetails();
             },
           ),
         );

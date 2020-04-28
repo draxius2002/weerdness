@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 import 'package:ffg_app/screens/notifications.dart';
 import 'package:ffg_app/util/events.dart';
 import 'package:ffg_app/widgets/badge.dart';
@@ -24,7 +24,7 @@ class _DishesScreenState extends State<DishesScreen> {
         ),
         centerTitle: true,
         title: Text(
-          "Dishes",
+          "Events",
         ),
         elevation: 0.0,
         actions: <Widget>[
@@ -153,4 +153,4 @@ class _DishesScreenState extends State<DishesScreen> {
       ),
     );
   }
-}
+}*/

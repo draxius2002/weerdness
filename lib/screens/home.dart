@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ffg_app/screens/dishes.dart';
 import 'package:ffg_app/screens/Form_Notify_Homeless.dart';
 import 'package:ffg_app/screens/Form_Volunteer_Group.dart';
-//import 'package:ffg_app/widgets/grid_product.dart';
-//import 'package:ffg_app/widgets/home_category.dart';
+import 'package:ffg_app/screens/Calendar_Screen.dart';
 import 'package:ffg_app/widgets/slider_item.dart';
 import 'package:ffg_app/util/events.dart';
 //import 'package:ffg_app/util/categories.dart';
@@ -59,7 +57,7 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (BuildContext context) {
-                          return DishesScreen();
+                          return CalendarScreen();
                         },
                       ),
                     );
