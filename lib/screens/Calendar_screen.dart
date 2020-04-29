@@ -1,84 +1,143 @@
 import 'package:flutter/material.dart';
+import 'package:table_calendar/table_calendar.dart';
 
+// Example holidays
+final Map<DateTime, List> _holidays = {
+  DateTime(2020, 1, 1): ['New Year\'s Day'],
+  DateTime(2020, 2, 14): ['Valentine\'s Day'],
+};
 class CalendarScreen extends StatefulWidget {
   @override
   _CalendarScreenState createState() => _CalendarScreenState();
 }
 
 class _CalendarScreenState extends State<CalendarScreen>
-    with AutomaticKeepAliveClientMixin<CalendarScreen> {
+    with TickerProviderStateMixin {
+  Map<DateTime, List> _events;
+  List _selectedEvents;
+  AnimationController _animationController;
+  CalendarController _calendarController;
+
+  @override
+  void initState() {
+    super.initState();
+    final _selectedDay = DateTime.now();
+
+    _events = {
+      _selectedDay.subtract(Duration(days: 4)): [
+        'Event A5',
+        'Event B5',
+        'Event C5'
+      ],
+      _selectedDay.subtract(Duration(days: 2)): ['Event A6', 'Event B6'],
+      _selectedDay: ['Event A7', 'Event B7', 'Event C7', 'Event D7'],
+      _selectedDay.add(Duration(days: 1)): [
+        'Event A8',
+        'Event B8',
+        'Event C8',
+        'Event D8'
+      ],
+      _selectedDay.add(Duration(days: 3)):
+          Set.from(['Event A9', 'Event A9', 'Event B9']).toList(),
+      _selectedDay.add(Duration(days: 7)): [
+        'Event A10',
+        'Event B10',
+        'Event C10'
+      ],
+    };
+
+    _selectedEvents = _events[_selectedDay] ?? [];
+    _calendarController = CalendarController();
+
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 400),
+    );
+
+    _animationController.forward();
+  }
+
+  @override
+  void dispose() {
+    _animationController.dispose();
+    _calendarController.dispose();
+    super.dispose();
+  }
+
+  void _onDaySelected(DateTime day, List events) {
+    print('CALLBACK: _onDaySelected');
+    setState(() {
+      _selectedEvents = events;
+    });
+  }
+
+  void _onVisibleDaysChanged(
+      DateTime first, DateTime last, CalendarFormat format) {
+    print('CALLBACK: _onVisibleDaysChanged');
+  }
+
+  void _onCalendarCreated(
+      DateTime first, DateTime last, CalendarFormat format) {
+    print('CALLBACK: _onCalendarCreated');
+  }
+
   @override
   Widget build(BuildContext context) {
-    super.build(context);
     return Scaffold(
-      body: CustomScrollView(
-        //padding: EdgeInsets.fromLTRB(10.0,0,10.0,0),
-        primary: false,
-        slivers: <Widget>[
-          SliverPadding(
-            padding: const EdgeInsets.all(20),
-            sliver: SliverGrid.count(
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              crossAxisCount: 2,
-              children: <Widget>[
-                Container(
-                    //width: 200,
-                    padding: const EdgeInsets.all(8),
-                    child: new TextField(
-                      decoration: new InputDecoration(
-                          border: new OutlineInputBorder(
-                            borderRadius: const BorderRadius.all(
-                              const Radius.circular(10.0),
-                            ),
-                          ),
-                          filled: true,
-                          hintStyle: new TextStyle(color: Colors.grey[800]),
-                          hintText: "Type in your text",
-                          fillColor: Colors.white70),
-                    )),
-                Container(
-                    padding: const EdgeInsets.all(8),
-                    child: new TextField(
-                      decoration: new InputDecoration(
-                          border: new OutlineInputBorder(
-                            borderRadius: const BorderRadius.all(
-                              const Radius.circular(10.0),
-                            ),
-                          ),
-                          filled: true,
-                          hintStyle: new TextStyle(color: Colors.grey[800]),
-                          hintText: "Type in your text",
-                          fillColor: Colors.white70),
-                    )),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Sound of screams but the'),
-                  color: Colors.green[300],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Who scream'),
-                  color: Colors.green[400],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Revolution is coming...'),
-                  color: Colors.green[500],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  child: const Text('Revolution, they...'),
-                  color: Colors.green[600],
-                ),
-              ],
-            ),
-          ),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          _buildTableCalendar(),
+          const SizedBox(height: 8.0),
+          Expanded(child: _buildEventList()),
         ],
       ),
     );
   }
 
-  @override
-  bool get wantKeepAlive => true;
+  // Simple TableCalendar configuration (using Styles)
+  Widget _buildTableCalendar() {
+    return TableCalendar(
+      calendarController: _calendarController,
+      events: _events,
+      holidays: _holidays,
+      startingDayOfWeek: StartingDayOfWeek.monday,
+      calendarStyle: CalendarStyle(
+        selectedColor: Colors.deepOrange[400],
+        todayColor: Colors.deepOrange[200],
+        markersColor: Colors.brown[700],
+        outsideDaysVisible: false,
+      ),
+      headerStyle: HeaderStyle(
+        formatButtonTextStyle:
+            TextStyle().copyWith(color: Colors.white, fontSize: 15.0),
+        formatButtonDecoration: BoxDecoration(
+          color: Colors.deepOrange[400],
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+      ),
+      onDaySelected: _onDaySelected,
+      onVisibleDaysChanged: _onVisibleDaysChanged,
+      onCalendarCreated: _onCalendarCreated,
+    );
+  }
+
+  Widget _buildEventList() {
+    return ListView(
+      children: _selectedEvents
+          .map((event) => Container(
+                decoration: BoxDecoration(
+                  border: Border.all(width: 0.8),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
+                child: ListTile(
+                  title: Text(event.toString()),
+                  onTap: () => print('$event tapped!'),
+                ),
+              ))
+          .toList(),
+    );
+  }
 }
