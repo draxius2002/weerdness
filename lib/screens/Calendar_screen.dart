@@ -103,16 +103,16 @@ class _CalendarScreenState extends State<CalendarScreen>
       holidays: _holidays,
       startingDayOfWeek: StartingDayOfWeek.monday,
       calendarStyle: CalendarStyle(
-        selectedColor: Colors.deepOrange[400],
-        todayColor: Colors.deepOrange[200],
-        markersColor: Colors.brown[700],
+        selectedColor: Color(0xff8fc9b1),
+        todayColor: Color(0xff56c596),
+        markersColor: Color(0xff306e54),
         outsideDaysVisible: false,
       ),
       headerStyle: HeaderStyle(
         formatButtonTextStyle:
             TextStyle().copyWith(color: Colors.white, fontSize: 15.0),
         formatButtonDecoration: BoxDecoration(
-          color: Colors.deepOrange[400],
+          color:  Color(0xff306e54),
           borderRadius: BorderRadius.circular(16.0),
         ),
       ),
