@@ -7,6 +7,8 @@ import 'package:ffg_app/widgets/badge.dart';
 import 'package:getflutter/getflutter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:intl/intl.dart';
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 
 class VolunteerGroup extends StatefulWidget {
   @override
@@ -15,10 +17,10 @@ class VolunteerGroup extends StatefulWidget {
 
 class _VolunteerGroupState extends State<VolunteerGroup> {
   final TextEditingController _nameControl = new TextEditingController();
-  final TextEditingController _ageControl = new TextEditingController();
-  final TextEditingController _genderControl = new TextEditingController();
-  final TextEditingController _descControl = new TextEditingController();
-
+ // final TextEditingController _ageControl = new TextEditingController();
+  //final TextEditingController _genderControl = new TextEditingController();
+  //final TextEditingController _descControl = new TextEditingController();
+  final dateFormat = DateFormat("EEEE, MMMM d, yyyy 'at' h:mma");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,270 +78,164 @@ class _VolunteerGroupState extends State<VolunteerGroup> {
               borderRadius: BorderRadius.circular(10),
             ),
             SizedBox(height: 30.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+            TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Group Name",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _nameControl,
+                ),
+                labelText: "Group Name",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons.perm_identity,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+            
+            TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Number of Pax",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _ageControl,
+                ),
+                labelText: "Group Leader",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons.perm_identity,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+            TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Group Leader",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _genderControl,
+                ),
+                labelText: "Group Leader Name",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons.perm_identity,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+            TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Phone Number",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _descControl,
+                ),
+                labelText: "Phone Number",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons.perm_identity,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+            TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Email",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _descControl,
+                ),
+                labelText: "Email",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons.perm_identity,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    color: Colors.black,
-                  ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Date to collaborate",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _descControl,
-                ),
-              ),
-            ),
-            SizedBox(height: 10.0),
+          /*  DateTimePickerFormField(
+              format: dateFormat,
+              decoration: InputDecoration(labelText: 'Date'),
+              onChanged: (dt) => setState(() => date = dt),
+            ), */
+             SizedBox(height: 10.0),
+             
             Container(
               height: 50.0,
               child: RaisedButton(
