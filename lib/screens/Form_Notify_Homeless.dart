@@ -72,187 +72,132 @@ class _NotifyHomelessState extends State<NotifyHomeless> {
               borderRadius: BorderRadius.circular(10),
             ),
             SizedBox(height: 30.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+
+            TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Where is the person located?",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _nameControl,
+                ),
+                labelText: "Where is the person located?",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons.location_on,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+            TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Name",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _ageControl,
+                ),
+                labelText: "His/Her Name",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons.face,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+           TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Gender",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _genderControl,
+                ),
+                labelText: "Gender",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons. perm_identity,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
-            Card(
-              elevation: 3.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(5.0),
-                  ),
-                ),
-                child: TextField(
-                  style: TextStyle(
-                    fontSize: 15.0,
+            TextField(
+              style: TextStyle(
+                fontSize: 15.0,
+                color: Colors.black,
+              ),
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    borderSide:
+                        BorderSide(color: Theme.of(context).accentColor)),
+                contentPadding: EdgeInsets.all(10.0),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                  borderSide: BorderSide(
                     color: Colors.black,
                   ),
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.all(10.0),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(5.0),
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.white,
-                      ),
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    hintText: "Age",
-                    prefixIcon: Icon(
-                      Icons.perm_identity,
-                      color: Colors.black,
-                    ),
-                    hintStyle: TextStyle(
-                      fontSize: 15.0,
-                      color: Colors.black,
-                    ),
-                  ),
-                  maxLines: 1,
-                  controller: _descControl,
+                ),
+                labelText: "Age",
+                labelStyle: TextStyle(
+                  color: Colors.black54,
+                ),
+                prefixIcon: Icon(
+                  Icons.all_inclusive,
+                  color: Colors.black,
                 ),
               ),
+              maxLines: 1,
+              controller: _nameControl,
             ),
             SizedBox(height: 10.0),
             Container(
               height: 50.0,
               child: RaisedButton(
                 child: Text(
-                  "Register".toUpperCase(),
+                  "Submit".toUpperCase(),
                   style: TextStyle(
                     color: Colors.white,
                   ),

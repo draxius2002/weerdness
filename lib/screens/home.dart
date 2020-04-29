@@ -132,14 +132,14 @@ class _HomeState extends State<Home> with AutomaticKeepAliveClientMixin<Home> {
                     ),
                     // titleText:'Volunteer as Group',
                     title: Text(
-                      'Volunteer Group Registration',
+                      'Register Group Collaboration',
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.w700,
                           fontSize: 16),
                     ),
                     subtitleText:
-                        'Gather your friend and family to be part of FFG team',
+                        'Gather your friend and family to be part of FFH team',
                     padding: new EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
                     margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
                   ),

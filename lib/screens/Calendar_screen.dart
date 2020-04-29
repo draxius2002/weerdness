@@ -32,17 +32,17 @@ class _CalendarScreenState extends State<CalendarScreen>
       _selectedDay.subtract(Duration(days: 2)): ['Event A6', 'Event B6'],
       _selectedDay: ['Event A7', 'Event B7', 'Event C7', 'Event D7'],
       _selectedDay.add(Duration(days: 1)): [
-        'Event A8',
-        'Event B8',
-        'Event C8',
+        'Collaborate with UniKL',
+        'Homeless & Urban Poor 2.0',
+        'Charity Event',
         'Event D8'
       ],
       _selectedDay.add(Duration(days: 3)):
           Set.from(['Event A9', 'Event A9', 'Event B9']).toList(),
       _selectedDay.add(Duration(days: 7)): [
-        'Event A10',
-        'Event B10',
-        'Event C10'
+        'Collaborate with UniKL',
+        'Homeless & Urban Poor 2.0',
+        'Charity Event'
       ],
     };
 
