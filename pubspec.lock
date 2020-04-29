@@ -595,6 +595,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.3"
+  timeline_list:
+    dependency: "direct main"
+    description:
+      name: timeline_list
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
   typed_data:
     dependency: transitive
     description:

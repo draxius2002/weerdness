@@ -44,7 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children: <Widget>[
               Container(
                 child: Image.asset(
-                  "assets/ffg1.png",
+                  "assets/ffh.png",
                   fit: BoxFit.fitHeight,
                 ),
               ),
