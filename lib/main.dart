@@ -1,3 +1,4 @@
+import 'package:ffg_app/providers/contribution_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ffg_app/providers/app_provider.dart';
@@ -9,6 +10,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => AppProvider()),
+        ChangeNotifierProvider(create: (_) => Contributor()),
       ],
       child: MyApp(),
     ),

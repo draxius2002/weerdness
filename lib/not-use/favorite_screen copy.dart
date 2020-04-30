@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ffg_app/util/events.dart';
-import 'package:ffg_app/widgets/grid_product.dart';
+//import 'package:ffg_app/widgets/grid_product.dart';
 
 class FavoriteScreen extends StatefulWidget {
   @override
@@ -36,19 +36,19 @@ class _FavoriteScreenState extends State<FavoriteScreen> with AutomaticKeepAlive
                     (MediaQuery.of(context).size.height / 1.25),
               ),
               itemCount: events == null ? 0 :events.length,
-              itemBuilder: (BuildContext context, int index) {
-//                Food food = Food.fromJson(events[index]);
-                Map food = events[index];
-//                print(events);
-//                print(events.length);
-                return GridProduct(
-                  img: food['img'],
-                  isFav: true,
-                  name: food['name'],
-                  rating: 5.0,
-                  raters: 23,
-                );
-              },
+//               itemBuilder: (BuildContext context, int index) {
+// //                Food food = Food.fromJson(events[index]);
+//                 Map food = events[index];
+// //                print(events);
+// //                print(events.length);
+//                 return GridProduct(
+//                   img: food['img'],
+//                   isFav: true,
+//                   name: food['name'],
+//                   rating: 5.0,
+//                   raters: 23,
+//                 );
+//               },
             ),
 
             SizedBox(height: 30),
