@@ -1,8 +1,8 @@
 # ffg_app
 
-A new Flutter project.
+This is flutter mobile android application based.
 
-by awadah test 6.22-29.4
+by awadah
 
 ## Getting Started
 
